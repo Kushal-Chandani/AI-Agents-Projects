@@ -4,3 +4,5 @@
 
 # Ignore all Connections.csv files anywhere
 **/Connections.csv
+
+data.db
