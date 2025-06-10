@@ -1,0 +1,6 @@
+# Ignore .env files
+.env
+.env.*
+
+# Ignore all Connections.csv files anywhere
+**/Connections.csv
