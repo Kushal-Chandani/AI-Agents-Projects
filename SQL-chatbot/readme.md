@@ -1,12 +1,10 @@
-
-```markdown
 # SQL Chatbot Project
 
 A Streamlit-based conversational AI assistant that converts natural language into SQL queries using the Google Gemini API, runs them on a local SQLite database, and displays results interactively.
 
 ## Setup
 
-1. Clone this repo and place your `Connections.csv` in the root directory.
+1. Clone this repo and place your csv in the root directory.
 2. Create a virtual environment and install dependencies:
    ```bash
    python -m venv venv
