@@ -2,7 +2,7 @@
 ```markdown
 # SQL Chatbot Project
 
-A Streamlit-based conversational AI assistant that converts natural language into SQL queries using the Google Gemini API, runs them on a local SQLite database (populated from Connections.csv), and displays results interactively.
+A Streamlit-based conversational AI assistant that converts natural language into SQL queries using the Google Gemini API, runs them on a local SQLite database, and displays results interactively.
 
 ## Setup
 
