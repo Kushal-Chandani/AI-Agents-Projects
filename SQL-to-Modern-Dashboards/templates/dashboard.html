@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Database Dashboard</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    #charts-container {
+      max-height: 800px; /* Set max height for the entire dashboard */
+      overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    .chart {
+      background-color: #1a1a1a;
+      border: 1px solid #333333;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .chart h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-size: 1.4em;
+      font-weight: 400;
+    }
+
+    .chart-container {
+      background-color: #2a2a2a;
+      border-radius: 4px;
+      padding: 10px;
+    }
+
+    .plotly-graph-div {
+      width: 100% !important;
+      height: 400px !important; /* Fixed height for individual charts */
+    }
+  </style>
+</head>
+<body>
+  <h1>Database Dashboard</h1>
+  <div id="charts-container"></div>
+
+  <script>
+    // Placeholder for dynamic chart data
+    const charts = []; // This will be replaced by backend
+
+    const container = document.getElementById("charts-container");
+
+    charts.forEach(chart => {
+      const chartDiv = document.createElement("div");
+      chartDiv.className = "chart";
+      chartDiv.innerHTML = `
+        <h3>${chart.title}</h3>
+        <div class="chart-container">
+          <div id="${chart.id}"></div>
+        </div>
+      `;
+      container.appendChild(chartDiv);
+
+      let trace = { marker: { color: '#666666' } };
+      if (chart.type === "pie") {
+        trace.labels = chart.labels;
+        trace.values = chart.values;
+      } else {
+        trace.x = chart.x;
+        trace.y = chart.y;
+      }
+
+      const data = [{
+        type: chart.type,
+        ...trace
+      }];
+
+      const layout = {
+        title: {
+          text: chart.title,
+          font: { color: '#ffffff' }
+        },
+        xaxis: {
+          title: { text: 'Category', font: { color: '#ffffff' } },
+          tickfont: { color: '#ffffff' },
+          gridcolor: '#333333'
+        },
+        yaxis: {
+          title: { text: 'Value', font: { color: '#ffffff' } },
+          tickfont: { color: '#ffffff' },
+          gridcolor: '#333333'
+        },
+        paper_bgcolor: '#2a2a2a',
+        plot_bgcolor: '#2a2a2a',
+        font: { color: '#ffffff' }
+      };
+
+      Plotly.newPlot(chart.id, data, layout);
+    });
+  </script>
+</body>
+</html>
