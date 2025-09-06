@@ -15,12 +15,13 @@ The main goals are:
 
 Here's a snapshot of what I'm currently working on. Each project is a standalone exploration into a specific application of AI agents.
 
-| Project Name                  | Description                                                                 |
-| ----------------------------- | --------------------------------------------------------------------------- |
-| `adk-news-agent`              | An AI agent that monitors and summarizes news articles.                     |
-| `Resume_chatbot`              | A chatbot designed to answer questions about a resume.                      |
-| `SQL-chatbot`                 | A chatbot that can interact with a SQL database using natural language.     |
-| `SQL-to-Modern-Dashboards`    | An agent that generates modern, interactive dashboards from SQL queries.    |
+| Project Name                                  | Description                                                                 |
+| --------------------------------------------- | --------------------------------------------------------------------------- |
+| `adk-news-agent`                              | An AI agent that monitors and summarizes news articles.                     |
+| `Resume_chatbot`                              | A chatbot designed to answer questions about a resume.                      |
+| `SQL-chatbot`                                 | A chatbot that can interact with a SQL database using natural language.     |
+| `SQL-to-Modern-Dashboards`                    | An agent that generates modern, interactive dashboards from SQL queries.    |
+| `Transport-information-system-using-Langraph` | A transport information system built using Langraph.                        |
 
 ## 🛠️ Getting Started
 
