@@ -18,6 +18,8 @@ from views.profile import render_profile_view
 from views.workout import render_workout_view
 from views.diet import render_diet_view
 from views.chatbot import render_chatbot_view
+from views.meal_analyzer import render_meal_analyzer_view
+from views.posture_analyzer import render_posture_analyzer_view
 from utils.ai_client import configure_genai
 
 # Init GenAI
@@ -40,7 +42,7 @@ with st.sidebar:
     # Navigation
     selection = st.radio(
         "Navigation",
-        ["📊 Profile & BMI", "🏋️ Workout Routine", "🥗 Diet Plan", "💬 AI Trainer Chat"],
+        ["📊 Profile & BMI", "🏋️ Workout Routine", "🥗 Diet Plan", "💬 AI Trainer Chat", "📸 Meal Analyzer", "🧘 Posture Analyzer"],
         label_visibility="collapsed"
     )
     
@@ -217,3 +219,7 @@ elif selection == "🥗 Diet Plan":
     render_diet_view()
 elif selection == "💬 AI Trainer Chat":
     render_chatbot_view()
+elif selection == "📸 Meal Analyzer":
+    render_meal_analyzer_view()
+elif selection == "🧘 Posture Analyzer":
+    render_posture_analyzer_view()

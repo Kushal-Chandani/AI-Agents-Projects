@@ -1,6 +1,7 @@
 import google.generativeai as genai
 import os
 import streamlit as st
+from PIL import Image
 
 def configure_genai():
     api_key = os.getenv("GEMINI_API_KEY")
@@ -31,6 +32,17 @@ def get_gemini_chat_response(history, user_input):
         model = genai.GenerativeModel('gemini-2.5-flash')
         chat = model.start_chat(history=history)
         response = chat.send_message(user_input)
+        return response.text
+    except Exception as e:
+        return f"⚠️ **Error:** {str(e)}"
+
+def get_gemini_vision_response(prompt, image):
+    if not configure_genai():
+        return "⚠️ Please configure your API Key first."
+    
+    try:
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        response = model.generate_content([prompt, image])
         return response.text
     except Exception as e:
         return f"⚠️ **Error:** {str(e)}"
