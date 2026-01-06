@@ -17,6 +17,7 @@ Here's a snapshot of what I'm currently working on. Each project is a standalone
 
 | Project Name                                  | Description                                                                 |
 | --------------------------------------------- | --------------------------------------------------------------------------- |
+| `AI-Fitness`                                  | An AI-powered fitness app with workout/diet generation, chat, and vision.   |
 | `adk-news-agent`                              | An AI agent that monitors and summarizes news articles.                     |
 | `Resume_chatbot`                              | A chatbot designed to answer questions about a resume.                      |
 | `SQL-chatbot`                                 | A chatbot that can interact with a SQL database using natural language.     |
