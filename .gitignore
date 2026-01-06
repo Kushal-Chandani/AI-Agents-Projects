@@ -3,3 +3,6 @@
 Profile.pdf
 summary.txt
 .env
+
+#pycache
+__pycache__/
